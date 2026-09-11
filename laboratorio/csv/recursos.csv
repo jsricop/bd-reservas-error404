@@ -1,0 +1,16 @@
+id,nombre,tipo,ubicacion,capacidad,atributos,activo
+1,Osciloscopio Tektronix TBS1052B,Instrumentación,Lab. Electrónica 201,1,2 canales · 50 MHz · hora tope 20:00,1
+2,Osciloscopio Rigol DS1054Z,Instrumentación,Lab. Electrónica 201,1,4 canales · 50 MHz · hora tope 20:00,1
+3,Multímetro Fluke 117,Instrumentación,Lab. Electrónica 201,1,True RMS · hora tope 18:00,1
+4,Multímetro UNI-T UT61E,Instrumentación,Lab. Electrónica 202,1,22000 cuentas · hora tope 18:00,1
+5,Fuente DC Korad KA3005P,Alimentación,Lab. Electrónica 202,1,30V 5A programable · hora tope 20:00,1
+6,Fuente DC doble GW Instek,Alimentación,Lab. Electrónica 202,1,Salida doble 30V · hora tope 20:00,1
+7,Generador de señales Siglent SDG1032X,Instrumentación,Lab. Electrónica 201,1,30 MHz · hora tope 20:00,1
+8,Kit Arduino Mega Starter,Prototipado,Lab. Sistemas 105,1,Mega 2560 + sensores · hora tope 20:00,1
+9,Kit Raspberry Pi 4 (8 GB),Prototipado,Lab. Sistemas 105,1,Con fuente y microSD · hora tope 18:00,1
+10,Kit ESP32 + sensores IoT,Prototipado,Lab. Sistemas 105,1,4 nodos · hora tope 20:00,1
+11,Impresora 3D Ender 3 V2,Manufactura,Taller 003,1,PLA · requiere inducción · hora tope 18:00,1
+12,Impresora 3D Prusa MK3S,Manufactura,Taller 003,1,PLA y PETG · hora tope 18:00,1
+13,Microscopio digital Celestron,Óptica,Lab. Física 110,1,5 MP · hora tope 18:00,1
+14,Estación de soldadura Hakko FX-888D,Manufactura,Taller 003,1,Con extractor · hora tope 18:00,1
+15,Analizador lógico Saleae Logic 8,Instrumentación,Lab. Sistemas 105,1,8 canales · hora tope 20:00,1

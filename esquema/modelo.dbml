@@ -1,0 +1,58 @@
+// Modelo entidad-relación · Sistema de reserva de recursos
+// Gestión de Proyectos de Software · UAN · 2026-II
+// Pegar el contenido de este archivo en https://dbdiagram.io
+
+Table usuarios {
+  id       integer      [pk]
+  nombre   varchar(120) [not null]
+  codigo   varchar(20)  [not null, unique]
+  programa varchar(80)  [not null]
+  correo   varchar(120) [not null, unique]
+
+  Note: 'Estudiantes precargados. No hay autenticacion: el usuario se identifica eligiendo su nombre de esta lista.'
+}
+
+Table recursos {
+  id        integer      [pk]
+  nombre    varchar(120) [not null]
+  tipo      varchar(60)  [not null]
+  ubicacion varchar(80)  [not null]
+  capacidad integer      [not null, default: 1]
+  atributos varchar(200)
+  activo    smallint     [not null, default: 1]
+
+  Note: 'Lo que se reserva. capacidad y atributos cambian segun el dominio del equipo.'
+}
+
+Table franjas {
+  id          integer [pk]
+  recurso_id  integer [not null, ref: > recursos.id]
+  fecha       date    [not null]
+  hora_inicio time    [not null]
+  hora_fin    time    [not null]
+
+  indexes {
+    (recurso_id, fecha) [name: 'idx_franjas_recurso_fecha']
+  }
+
+  Note: 'Bloques horarios disponibles de cada recurso, por dia. Una franja esta libre si no tiene una reserva en estado activa.'
+}
+
+Table reservas {
+  id          integer     [pk]
+  franja_id   integer     [not null, ref: > franjas.id]
+  recurso_id  integer     [not null, ref: > recursos.id]
+  usuario_id  integer     [not null, ref: > usuarios.id]
+  fecha       date        [not null]
+  hora_inicio time        [not null]
+  hora_fin    time        [not null]
+  estado      varchar(15) [not null]
+  creada_en   timestamp   [not null]
+
+  indexes {
+    (usuario_id, estado) [name: 'idx_reservas_usuario']
+    (franja_id, estado)  [name: 'idx_reservas_franja']
+  }
+
+  Note: 'estado: activa, completada o cancelada. recurso_id, fecha, hora_inicio y hora_fin se repiten a proposito desde franjas para que la consulta de mis reservas no necesite joins.'
+}
