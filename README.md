@@ -6,10 +6,12 @@ Repositorio del equipo **Error 404**.
 | | |
 |---|---|
 | Recursos | 15 |
-| Franjas horarias | 1800 |
-| Reservas semilla | 216 |
+| Franjas horarias | 7110 |
+| Reservas semilla | 570 |
 | Usuarios | 40 |
-| Periodo cubierto | 7 de septiembre a 2 de octubre de 2026, días hábiles |
+| Periodo cubierto | 7 de septiembre a 31 de diciembre de 2026, días hábiles |
+
+Del 5 de octubre en adelante los datos vienen en `datos_complemento.sql`. Ver `README_COMPLEMENTO.md`.
 
 Hay reservas en fechas pasadas y futuras, en estado `activa`, `completada` y `cancelada`, para que puedan probar los tres casos.
 
